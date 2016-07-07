@@ -12,6 +12,7 @@ app.get('/news', function(req, res) {
     res.sendFile(process.cwd() + '/public/news.html');
 });
 
-app.listen(8080, function () {
-    console.log("Express server running at http://localhost:" + 8080);
+const port = process.env.PORT || 3000
+app.listen(port, function () {
+    console.log("Express server running at http://localhost:" + port);
 });
